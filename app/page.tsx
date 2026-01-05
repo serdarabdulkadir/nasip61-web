@@ -37,6 +37,12 @@ const Navbar = () => {
               </Link>
             ))}
             <Link 
+              href="/galeri" 
+              className={`font-medium text-sm uppercase tracking-wide hover:text-amber-500 transition-colors ${scrolled ? 'text-stone-600' : 'text-stone-200'}`}
+            >
+              Galeri
+            </Link>
+            <Link 
               href="/randevu" 
               className={`px-6 py-2.5 rounded-full font-medium flex items-center gap-2 transition-all shadow-lg ${scrolled ? 'bg-emerald-900 text-white hover:bg-emerald-800' : 'bg-white text-emerald-950 hover:bg-stone-100'}`}
             >
@@ -59,6 +65,7 @@ const Navbar = () => {
             <Link onClick={() => setIsOpen(false)} href="#hero" className="font-serif text-stone-800 text-xl">Ana Sayfa</Link>
             <Link onClick={() => setIsOpen(false)} href="#hizmetler" className="font-serif text-stone-800 text-xl">Hizmetler</Link>
             <Link onClick={() => setIsOpen(false)} href="#ürünler" className="font-serif text-stone-800 text-xl">Ürünler</Link>
+            <Link onClick={() => setIsOpen(false)} href="/galeri" className="font-serif text-stone-800 text-xl">Galeri</Link>
             <Link onClick={() => setIsOpen(false)} href="/randevu" className="bg-amber-600 text-white px-10 py-3 rounded-full mt-4 shadow-lg flex items-center gap-2">
               <CalendarCheck size={20}/> Randevu Oluştur
             </Link>
