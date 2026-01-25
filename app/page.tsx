@@ -340,7 +340,7 @@ export default function Home() {
              {/* Sağ: GOOGLE MAPS IFRAME */}
              <div className="md:w-1/2 h-[400px] md:h-auto bg-stone-200 relative">
                <iframe 
-                 src="https://maps.google.com/maps?q=Söğütlü,+Fatih+Sultan+Mehmet+Cd.+No:1,+61300+Akçaabat/Trabzon&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.467475730376!2d39.57688237654158!3d41.0125869713503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406aa86a5996362f%3A0x6734151121666661!2sS%C3%B6%C4%9F%C3%BCtl%C3%BC%2C%20Fatih%20Sultan%20Mehmet%20Cd.%20No%3A1%2C%2061300%20Ak%C3%A7aabat%2FTrabzon!5e1!3m2!1str!2str!4v1736107954930!5m2!1str!2str"
                  width="100%" 
                  height="100%" 
                  style={{border:0}} 
@@ -349,6 +349,8 @@ export default function Home() {
                  referrerPolicy="no-referrer-when-downgrade"
                  className="grayscale hover:grayscale-0 transition-all duration-700"
                ></iframe>
+               
+               {/* Harita üzerindeki küçük etiket */}
                <div className="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-xl shadow-lg flex items-center gap-2 text-sm font-bold text-emerald-950">
                  <MapPin size={16} className="text-amber-600" /> Nasip61 Konum
                </div>

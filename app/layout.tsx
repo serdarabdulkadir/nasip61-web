@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
+// İçe aktarma kodun zaten vardı, burası doğru
+import { GoogleTagManager } from '@next/third-parties/google'
 
 // Başlıklar için zarif, tırnaklı font
 const playfair = Playfair_Display({
@@ -28,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
+      {/* --- GTM KODU BURAYA EKLENDİ --- */}
+      {/* Aşağıdaki GTM-XXXXXX kısmına kendi kodunu yazmalısın */}
+      <GoogleTagManager gtmId="GTM-NN5LVXNG" />
+      
       <body
         className={`${playfair.variable} ${montserrat.variable} antialiased bg-stone-50 text-stone-800`}
       >
