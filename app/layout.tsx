@@ -32,7 +32,8 @@ export default function RootLayout({
     <html lang="tr" className="scroll-smooth">
       {/* --- GTM KODU BURAYA EKLENDİ --- */}
       {/* Aşağıdaki GTM-XXXXXX kısmına kendi kodunu yazmalısın */}
-      <GoogleTagManager gtmId="GTM-NN5LVXNG" />
+      <GoogleTagManager gtmId="GTM-N813SRFY27" />
+      
       
       <body
         className={`${playfair.variable} ${montserrat.variable} antialiased bg-stone-50 text-stone-800`}
