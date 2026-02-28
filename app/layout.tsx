@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
-// Next.js'in resmi Google kütüphanesini kullanıyoruz
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from "@vercel/analytics/next"
+import { GoogleTagManager } from '@next/third-parties/google'
 
+// Başlıklar için zarif, tırnaklı font
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
 });
 
+// Düz yazılar için modern font
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -28,12 +30,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
+      {/* --- GTM KODU BURAYA EKLENDİ --- */}
+      {/* Aşağıdaki GTM-XXXXXX kısmına kendi kodunu yazmalısın */}
+      <GoogleTagManager gtmId="GTM-NMLLWXJ8" />
+      
+      
       <body
         className={`${playfair.variable} ${montserrat.variable} antialiased bg-stone-50 text-stone-800`}
       >
         {children}
-        {/* Analytics ID'ni buraya tanımlıyoruz */}
-        <GoogleAnalytics gaId="G-N813SRFY27" />
+        <Analytics />
       </body>
     </html>
   );
